@@ -14,7 +14,7 @@ bool operator==(const Color &lhs, const Color &rhs) {
 }
 
 std::ostream& operator<<(std::ostream &strm, const Color &color) {
-	return strm << "(" << color.r << ", " << color.g << ", " << color.b << ")";
+	return strm << "(" << (int)color.r << ", " << (int)color.g << ", " << (int)color.b << ")";
 }
 
 const Color black = Color{0, 0, 0};
@@ -23,9 +23,8 @@ const Color red   = Color{255, 0, 0};
 const Color green = Color{0, 255, 0};
 const Color blue  = Color{0, 0, 255};
 
-Color[HEIGHT][WIDTH] board = {
+Color board[HEIGHT][WIDTH] = {
 {black, black, black, black, black, black, black, black, black},
-{black, white, white, white, white, white, white, white, black},
 {black, white, white, white, white, white, white, white, black},
 {black, white, white, white, white, white, white, white, black},
 {black, white, white, white, white, white, white, white, black},
